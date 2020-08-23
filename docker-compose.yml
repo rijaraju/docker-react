@@ -1,12 +1,13 @@
 version: "3"
 services:
+  #add two services one for web and second one testing
   web:
     stdin_open: true
     environment:
       - CHOKIDAR_USEPOLLING=true
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.dev # build in development envitonment
     ports:
       - "3000:3000"
     volumes:
@@ -19,4 +20,4 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
-    command: ["npm", "run", "test"]
+    command: ["npm", "run", "test"] # run test command

@@ -1,5 +1,5 @@
 language: generic
-sudo: required
+sudo: required # sudo acces required
 
 services:
   - docker
@@ -21,3 +21,4 @@ deploy:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+  # use t2.small
